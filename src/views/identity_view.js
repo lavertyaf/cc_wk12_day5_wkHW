@@ -16,8 +16,12 @@ IdentityView.prototype.bindEvents = function () {
 IdentityView.prototype.displayIdentity = function (data) {
 
   const newIdContainer = document.createElement('div');
-  newIdContainer.classList.add('new-id-container');
+  const newImageContainer = document.createElement('div');
+  const newInfoContainer = document.createElement('div');
   const container = document.querySelector('#identity');
+  newIdContainer.classList.add('new-id-container');
+  newImageContainer.classList.add('new-image-container');
+  newInfoContainer.classList.add('new-info-container');
 
   container.innerHTML = '';
 
@@ -40,9 +44,12 @@ IdentityView.prototype.displayIdentity = function (data) {
   newIdContainer.appendChild(birthdayInfo)
   newIdContainer.appendChild(mobileInfo)
   newIdContainer.appendChild(countryInfo)
-  newIdContainer.appendChild(image)
+  newImageContainer.appendChild(image)
 
-  container.appendChild(newIdContainer);
+  newInfoContainer.appendChild(newIdContainer);
+  newInfoContainer.appendChild(newImageContainer);
+
+  container.appendChild(newInfoContainer);
 
 };
 

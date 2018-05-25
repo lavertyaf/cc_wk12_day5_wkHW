@@ -1,13 +1,61 @@
+body {
+  font-family: Arial;
+  background-image: url("../images/spanishflag.png");
+  background-repeat: repeat;
+
+}
+
 #identity li{
   border: 1px solid black;
   list-style: none;
-  width: 200px;
+  width: 400px;
+  height: 60px;
+  font-size: 30px;
   padding: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  opacity: 0.75;
+
+
 }
-/*
-Identities.prototype.addImage(data){
-  const names = ['Alex', 'Keith']
-  const randomNumber = 0
-  data.src = `images/${filenames[randomNumber]}.jpg`
-  return data
-} */
+
+
+#new-info-container{
+  display: inline;
+}
+
+#img {
+  border: 10px solid black;
+  width: 400px;
+  height: 400px;
+  padding: 30px;
+}
+
+.gender-button {
+  width: 250px;
+  height: 100px;
+  font-size: 40px;
+  margin: 20px;
+  background-color: lightblue;
+
+}
+
+.gender-button:hover{
+  background-color: lightgrey;
+}
+
+.gender-button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}
+
+#logo {
+font-size: 60px;
+justify-content: center;
+background-color: white;
+opacity: 0.75;
+align-content: center;
+
+
+}

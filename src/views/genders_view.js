@@ -15,7 +15,7 @@ GendersView.prototype.render = function () {
 GendersView.prototype.createItem = function (gender) {
   const menuItem = document.createElement('button');
   menuItem.classList.add('gender-button');
-  menuItem.textContent = gender;
+  menuItem.textContent = gender.toUpperCase();
   menuItem.id = gender;
 
   menuItem.addEventListener('click', (evt) => {
