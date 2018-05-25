@@ -8,8 +8,7 @@ RequestHelper.prototype.get = function (onComplete) {
   xhr.addEventListener('load', function() {
     if (this.status !== 200) {
       return;
-    }
-
+    };
     const data = JSON.parse(this.responseText);
     onComplete(data);
   });

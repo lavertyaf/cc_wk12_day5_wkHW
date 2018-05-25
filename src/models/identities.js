@@ -7,21 +7,30 @@ const Identities = function () {
 
 Identities.prototype.bindEvents = function () {
   PubSub.subscribe('Gender:selected', (evt) => {
-    console.log("subscribed to gs");
-    const selectedGender = evt.detail; //"female"
+    const selectedGender = evt.detail;
     this.getIdentityData(selectedGender);
   });
 };
 
 Identities.prototype.getIdentityData = function (selectedGender) {
-  const requestHelper = new RequestHelper(`http://uinames.com/api/?gender=${selectedGender}&ext`);
+  const requestHelper = new RequestHelper(`http://uinames.com/api/?gender=${selectedGender}&ext&region=spain`);
+  requestHelper.get((data) => {
+    data = this.addImage(data)
+    this.handleDataReady(data)
+  });
+};
 
-  requestHelper.get((data) => this.handleDataReady(data));
+Identities.prototype.addImage = function (data) {
+  const names = ['aileen', 'alex', 'Alex2', 'andris', 'balazs', 'brendan', 'claire', 'ewa', 'jaime', 'jemma', 'joe', 'lewis', 'marta', 'matthew', 'michael', 'michelle', 'rachel', 'ryan', 'sebastian', 'simon', 'keith', 'pawel', 'alexb', 'sian'];
+  const randomNumber = Math.floor(Math.random()*24);
+  console.log(randomNumber);
+
+  data.src = `images/${names[randomNumber]}.jpeg`
+  return data
 };
 
 Identities.prototype.handleDataReady = function (data) {
-  PubSub.publish('Identities:data-ready', data)
-  console.log(data);
+  PubSub.publish('Identities:data-ready', data);
 };
 
 

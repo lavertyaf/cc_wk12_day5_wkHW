@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const gendersViewContainer = document.querySelector('#genders')
   const gendersView = new GendersView(gendersViewContainer);
-  // identityView.bindEvents();
   gendersView.render();
 
   const identityViewContainer = document.querySelector('#identities')
@@ -17,5 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const identities = new Identities();
   identities.bindEvents();
-  // identities.getData();
 });

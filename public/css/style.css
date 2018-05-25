@@ -1,0 +1,13 @@
+#identity li{
+  border: 1px solid black;
+  list-style: none;
+  width: 200px;
+  padding: 5px;
+}
+/*
+Identities.prototype.addImage(data){
+  const names = ['Alex', 'Keith']
+  const randomNumber = 0
+  data.src = `images/${filenames[randomNumber]}.jpg`
+  return data
+} */

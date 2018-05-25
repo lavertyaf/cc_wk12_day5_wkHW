@@ -5,12 +5,6 @@ const GendersView = function (element) {
   this.genders = ["male", "female", "random"];
 };
 
-// MenuView.prototype.bindEvents = function () {
-//   PubSub.subscribe('Identities:identity-ready', (evt) => {
-//     this.render(evt.detail);
-//   });
-// };
-
 GendersView.prototype.render = function () {
   this.genders.forEach((gender) => {
     const menuItem = this.createItem(gender);
