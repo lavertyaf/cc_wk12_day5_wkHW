@@ -18,8 +18,10 @@ IdentityView.prototype.displayIdentity = function (data) {
   const newIdContainer = document.createElement('div');
   const newImageContainer = document.createElement('div');
   const newInfoContainer = document.createElement('div');
+  const newIdentityContainer = document.createElement('div');
   const container = document.querySelector('#identity');
   newIdContainer.classList.add('new-id-container');
+  newIdentityContainer.classList.add('new-identity-container');
   newImageContainer.classList.add('new-image-container');
   newInfoContainer.classList.add('new-info-container');
 

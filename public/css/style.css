@@ -2,7 +2,12 @@ body {
   font-family: Arial;
   background-image: url("../images/spanishflag.png");
   background-repeat: repeat;
+}
 
+.new-info-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #identity li{
@@ -16,20 +21,17 @@ body {
   color: white;
   text-align: center;
   opacity: 0.75;
-
-
 }
 
-
-#new-info-container{
-  display: inline;
-}
-
-#img {
+img {
   border: 10px solid black;
-  width: 400px;
-  height: 400px;
   padding: 30px;
+  position: relative;
+  float: left;
+  width:  220px;
+  height: 280px;
+  margin-left: 20px;
+
 }
 
 .gender-button {
@@ -38,6 +40,7 @@ body {
   font-size: 40px;
   margin: 20px;
   background-color: lightblue;
+  border: 1px solid black;
 
 }
 
@@ -52,10 +55,13 @@ body {
 
 #logo {
 font-size: 60px;
-justify-content: center;
 background-color: white;
 opacity: 0.75;
-align-content: center;
+text-align: center;
+}
 
-
+#genders{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
